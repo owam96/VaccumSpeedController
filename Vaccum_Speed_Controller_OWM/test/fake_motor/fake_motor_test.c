@@ -34,7 +34,7 @@ TEST(Motor, MotorAnge140AfterInit){
     MOTOR_init();
 
     /*Assert*/
-    LONGS_EQUAL(140, FAKE_MOTOR_get_angle());
+    LONGS_EQUAL(140, MOTOR_get_angle());
 }
 
 TEST(Motor, SpeedMinMotorAngle140){
@@ -53,7 +53,7 @@ TEST(Motor, SpeedMinMotorAngle140){
 	/* Act */
 
     /*Assert*/
-    LONGS_EQUAL(140, FAKE_MOTOR_get_angle());
+    LONGS_EQUAL(140, MOTOR_get_angle());
 }
 
 TEST(Motor, SpeedMedMotorAngle90){
@@ -72,7 +72,7 @@ TEST(Motor, SpeedMedMotorAngle90){
 	/* Act */
 
     /*Assert*/
-    LONGS_EQUAL(90, FAKE_MOTOR_get_angle());
+    LONGS_EQUAL(90, MOTOR_get_angle());
 }
 
 TEST(Motor, SpeedMaxMotorAngle10){
@@ -91,7 +91,7 @@ TEST(Motor, SpeedMaxMotorAngle10){
 	/* Act */
 
     /*Assert*/
-    LONGS_EQUAL(10, FAKE_MOTOR_get_angle());
+    LONGS_EQUAL(10, MOTOR_get_angle());
 }
 
 TEST_GROUP_RUNNER(Motor){

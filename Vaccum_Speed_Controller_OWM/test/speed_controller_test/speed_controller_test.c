@@ -44,7 +44,7 @@ TEST(SpeedLevel, SpeedMedAfterInit){
     /*Assert*/
     LONGS_EQUAL(MED, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(FAKE_MOTOR_get_angle());
+    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedIncreaseMinToMedWhen_Pos_Prepressed){
@@ -66,7 +66,7 @@ TEST(SpeedLevel, SpeedIncreaseMinToMedWhen_Pos_Prepressed){
     /*Assert*/
     LONGS_EQUAL(MED, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(FAKE_MOTOR_get_angle());
+    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedIncreaseMedToMaxWhen_Pos_Prepressed){
@@ -88,7 +88,7 @@ TEST(SpeedLevel, SpeedIncreaseMedToMaxWhen_Pos_Prepressed){
     /*Assert*/
     LONGS_EQUAL(MAX, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(FAKE_MOTOR_get_angle());
+    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedDecreaseMaxToMedWhen_Neg_Prepressed){
@@ -110,7 +110,7 @@ TEST(SpeedLevel, SpeedDecreaseMaxToMedWhen_Neg_Prepressed){
     /*Assert*/
     LONGS_EQUAL(MED, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(FAKE_MOTOR_get_angle());
+    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedDecreaseMedToMinWhen_Neg_Prepressed){
@@ -132,7 +132,7 @@ TEST(SpeedLevel, SpeedDecreaseMedToMinWhen_Neg_Prepressed){
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(FAKE_MOTOR_get_angle());
+    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedMax_Pos_PrepressedNoChange){
@@ -154,7 +154,7 @@ TEST(SpeedLevel, SpeedMax_Pos_PrepressedNoChange){
     /*Assert*/
     LONGS_EQUAL(MAX, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(FAKE_MOTOR_get_angle());
+    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedMin_Neg_PrepressedNoChange){
@@ -176,7 +176,7 @@ TEST(SpeedLevel, SpeedMin_Neg_PrepressedNoChange){
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(FAKE_MOTOR_get_angle());
+    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedMax_P_isPressed30secsSpeedMed){
@@ -198,7 +198,7 @@ TEST(SpeedLevel, SpeedMax_P_isPressed30secsSpeedMed){
     /*Assert*/
     LONGS_EQUAL(MED, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(FAKE_MOTOR_get_angle());
+    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedMed_P_isPressed30secsSpeedMin){
@@ -220,7 +220,7 @@ TEST(SpeedLevel, SpeedMed_P_isPressed30secsSpeedMin){
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(FAKE_MOTOR_get_angle());
+    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedMin_P_isPressed30secsNoChange){
@@ -242,7 +242,7 @@ TEST(SpeedLevel, SpeedMin_P_isPressed30secsNoChange){
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(FAKE_MOTOR_get_angle());
+    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedMax_P_isPressedLessThan30secsNoChange){
@@ -264,7 +264,7 @@ TEST(SpeedLevel, SpeedMax_P_isPressedLessThan30secsNoChange){
     /*Assert*/
     LONGS_EQUAL(MAX, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(FAKE_MOTOR_get_angle());
+    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 /* Tests to cover state transition 1-switch coverage */
@@ -294,7 +294,7 @@ TEST(SpeedLevel, StartDefMinDefMin){
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(FAKE_MOTOR_get_angle());
+    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, StartDefMinDefMax){
@@ -322,7 +322,7 @@ TEST(SpeedLevel, StartDefMinDefMax){
     /*Assert*/
     LONGS_EQUAL(MAX, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(FAKE_MOTOR_get_angle());
+    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, StartDefMaxDefMin){
@@ -350,7 +350,7 @@ TEST(SpeedLevel, StartDefMaxDefMin){
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(FAKE_MOTOR_get_angle());
+    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, StartDefMaxDefMax){
@@ -378,7 +378,7 @@ TEST(SpeedLevel, StartDefMaxDefMax){
     /*Assert*/
     LONGS_EQUAL(MAX, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(FAKE_MOTOR_get_angle());
+    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 

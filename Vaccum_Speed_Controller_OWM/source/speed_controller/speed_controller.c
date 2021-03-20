@@ -13,7 +13,7 @@ void SPEED_CONTROLLER_init(){
 }
 
 SPEED_t SPEED_CONTROLLER_get_speed(){
-    int current_motor_angle = FAKE_MOTOR_get_angle();
+    int current_motor_angle = MOTOR_get_angle();
     if(current_motor_angle == MIN_SPEED_ANGLE){
         return MIN;
     }
