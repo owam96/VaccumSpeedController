@@ -29,7 +29,7 @@ int main(int argc, char * argv[])
     MAKE_UNITY_VERBOSE;
     UnityMain(argc, argv, RunAllTests);
 
-    printf("\nApp is running\n");
+    printf("\nApp is running...\n");
 
     SWITCHES_init();
     SPEED_CONTROLLER_init();
