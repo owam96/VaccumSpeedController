@@ -10,4 +10,8 @@ void MOTOR_init_real();
 
 int MOTOR_get_angle_real();
 
+extern void (*MOTOR_set_angle)(int);
+extern void (*MOTOR_init)();
+extern int (*MOTOR_get_angle)();
+
 #endif // MOTOR_H_INCLUDED
