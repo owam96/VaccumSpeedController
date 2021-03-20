@@ -1,0 +1,130 @@
+\hypertarget{fake__motor__test_8c}{}\doxysection{D\+:/\+Swift Act/\+PROJECT V2/\+Vaccum\+\_\+\+Speed\+\_\+\+Controller\+\_\+\+OWM/test/fake\+\_\+motor/fake\+\_\+motor\+\_\+test.c File Reference}
+\label{fake__motor__test_8c}\index{D:/Swift Act/PROJECT V2/Vaccum\_Speed\_Controller\_OWM/test/fake\_motor/fake\_motor\_test.c@{D:/Swift Act/PROJECT V2/Vaccum\_Speed\_Controller\_OWM/test/fake\_motor/fake\_motor\_test.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}fake\+\_\+motor\+\_\+test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../unity/unity\+\_\+fixture.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fake\+\_\+motor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../source/motor/motor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../source/speed\+\_\+controller/speed\+\_\+controller.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{fake__motor__test_8c_afa2460ee28762313d60bba84542f85b6}{FAKE\+\_\+\+MOTOR\+\_\+output\+Final\+Motor\+Angle}} (int)
+\item 
+\mbox{\hyperlink{fake__motor__test_8c_a3f7001a8bbddff745c0ec733d4fba19f}{TEST\+\_\+\+GROUP}} (Motor)
+\item 
+\mbox{\hyperlink{fake__motor__test_8c_ab9345dd4aa6df4bdac655e1d3afd4583}{TEST\+\_\+\+SETUP}} (Motor)
+\item 
+\mbox{\hyperlink{fake__motor__test_8c_a936f48619e278f4027db2836ebc9e436}{TEST\+\_\+\+TEAR\+\_\+\+DOWN}} (Motor)
+\item 
+\mbox{\hyperlink{fake__motor__test_8c_a67cb378165f87855a1db62fef3473e58}{TEST}} (Motor, Motor\+Ange140\+After\+Init)
+\item 
+\mbox{\hyperlink{fake__motor__test_8c_a9ddf250e559cb1d6f5fbc4f92193da9a}{TEST}} (Motor, Speed\+Min\+Motor\+Angle140)
+\item 
+\mbox{\hyperlink{fake__motor__test_8c_adaf294fac3f23e78a11d70bc75d7d973}{TEST}} (Motor, Speed\+Med\+Motor\+Angle90)
+\item 
+\mbox{\hyperlink{fake__motor__test_8c_af6e9c5f1545d046302d5bc5613cebeb8}{TEST}} (Motor, Speed\+Max\+Motor\+Angle10)
+\item 
+\mbox{\hyperlink{fake__motor__test_8c_a3447a2a31df80a9eead09cedbf9012ef}{TEST\+\_\+\+GROUP\+\_\+\+RUNNER}} (Motor)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fake__motor__test_8c_afa2460ee28762313d60bba84542f85b6}\label{fake__motor__test_8c_afa2460ee28762313d60bba84542f85b6}} 
+\index{fake\_motor\_test.c@{fake\_motor\_test.c}!FAKE\_MOTOR\_outputFinalMotorAngle@{FAKE\_MOTOR\_outputFinalMotorAngle}}
+\index{FAKE\_MOTOR\_outputFinalMotorAngle@{FAKE\_MOTOR\_outputFinalMotorAngle}!fake\_motor\_test.c@{fake\_motor\_test.c}}
+\doxysubsubsection{\texorpdfstring{FAKE\_MOTOR\_outputFinalMotorAngle()}{FAKE\_MOTOR\_outputFinalMotorAngle()}}
+{\footnotesize\ttfamily void FAKE\+\_\+\+MOTOR\+\_\+output\+Final\+Motor\+Angle (\begin{DoxyParamCaption}\item[{int}]{final\+\_\+motor\+\_\+angle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fake__motor__test_8c_a67cb378165f87855a1db62fef3473e58}\label{fake__motor__test_8c_a67cb378165f87855a1db62fef3473e58}} 
+\index{fake\_motor\_test.c@{fake\_motor\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!fake\_motor\_test.c@{fake\_motor\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Motor}]{,  }\item[{Motor\+Ange140\+After\+Init}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\itshape EP and BVA}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Motor angle uninitialized \\
+\hline
+{\em When} & \+: \mbox{\hyperlink{fake__motor_8c_afd51952cc817057f774406782d972258}{FAKE\+\_\+\+MOTOR\+\_\+init()}} is called \\
+\hline
+{\em Then} & \+: Motor angle is 140\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fake__motor__test_8c_af6e9c5f1545d046302d5bc5613cebeb8}\label{fake__motor__test_8c_af6e9c5f1545d046302d5bc5613cebeb8}} 
+\index{fake\_motor\_test.c@{fake\_motor\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!fake\_motor\_test.c@{fake\_motor\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Motor}]{,  }\item[{Speed\+Max\+Motor\+Angle10}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\itshape EP and BVA}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is maximum \\
+\hline
+{\em When} & \+: No action \\
+\hline
+{\em Then} & \+: Motor angle is 10\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fake__motor__test_8c_adaf294fac3f23e78a11d70bc75d7d973}\label{fake__motor__test_8c_adaf294fac3f23e78a11d70bc75d7d973}} 
+\index{fake\_motor\_test.c@{fake\_motor\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!fake\_motor\_test.c@{fake\_motor\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Motor}]{,  }\item[{Speed\+Med\+Motor\+Angle90}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\itshape EP and BVA}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is medium \\
+\hline
+{\em When} & \+: No action \\
+\hline
+{\em Then} & \+: Motor angle is 90\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fake__motor__test_8c_a9ddf250e559cb1d6f5fbc4f92193da9a}\label{fake__motor__test_8c_a9ddf250e559cb1d6f5fbc4f92193da9a}} 
+\index{fake\_motor\_test.c@{fake\_motor\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!fake\_motor\_test.c@{fake\_motor\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Motor}]{,  }\item[{Speed\+Min\+Motor\+Angle140}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\itshape EP and BVA}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is minimum \\
+\hline
+{\em When} & \+: No action \\
+\hline
+{\em Then} & \+: Motor angle is 140\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fake__motor__test_8c_a3f7001a8bbddff745c0ec733d4fba19f}\label{fake__motor__test_8c_a3f7001a8bbddff745c0ec733d4fba19f}} 
+\index{fake\_motor\_test.c@{fake\_motor\_test.c}!TEST\_GROUP@{TEST\_GROUP}}
+\index{TEST\_GROUP@{TEST\_GROUP}!fake\_motor\_test.c@{fake\_motor\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST\_GROUP()}{TEST\_GROUP()}}
+{\footnotesize\ttfamily TEST\+\_\+\+GROUP (\begin{DoxyParamCaption}\item[{Motor}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fake__motor__test_8c_a3447a2a31df80a9eead09cedbf9012ef}\label{fake__motor__test_8c_a3447a2a31df80a9eead09cedbf9012ef}} 
+\index{fake\_motor\_test.c@{fake\_motor\_test.c}!TEST\_GROUP\_RUNNER@{TEST\_GROUP\_RUNNER}}
+\index{TEST\_GROUP\_RUNNER@{TEST\_GROUP\_RUNNER}!fake\_motor\_test.c@{fake\_motor\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST\_GROUP\_RUNNER()}{TEST\_GROUP\_RUNNER()}}
+{\footnotesize\ttfamily TEST\+\_\+\+GROUP\+\_\+\+RUNNER (\begin{DoxyParamCaption}\item[{Motor}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fake__motor__test_8c_ab9345dd4aa6df4bdac655e1d3afd4583}\label{fake__motor__test_8c_ab9345dd4aa6df4bdac655e1d3afd4583}} 
+\index{fake\_motor\_test.c@{fake\_motor\_test.c}!TEST\_SETUP@{TEST\_SETUP}}
+\index{TEST\_SETUP@{TEST\_SETUP}!fake\_motor\_test.c@{fake\_motor\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST\_SETUP()}{TEST\_SETUP()}}
+{\footnotesize\ttfamily TEST\+\_\+\+SETUP (\begin{DoxyParamCaption}\item[{Motor}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fake__motor__test_8c_a936f48619e278f4027db2836ebc9e436}\label{fake__motor__test_8c_a936f48619e278f4027db2836ebc9e436}} 
+\index{fake\_motor\_test.c@{fake\_motor\_test.c}!TEST\_TEAR\_DOWN@{TEST\_TEAR\_DOWN}}
+\index{TEST\_TEAR\_DOWN@{TEST\_TEAR\_DOWN}!fake\_motor\_test.c@{fake\_motor\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST\_TEAR\_DOWN()}{TEST\_TEAR\_DOWN()}}
+{\footnotesize\ttfamily TEST\+\_\+\+TEAR\+\_\+\+DOWN (\begin{DoxyParamCaption}\item[{Motor}]{ }\end{DoxyParamCaption})}
+

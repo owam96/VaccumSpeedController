@@ -1,0 +1,6 @@
+#ifndef FAKE_MOTOR_TEST_H_INCLUDED
+#define FAKE_MOTOR_TEST_H_INCLUDED
+
+void FAKE_MOTOR_outputFinalMotorAngle(int);
+
+#endif // FAKE_MOTOR_TEST_H_INCLUDED

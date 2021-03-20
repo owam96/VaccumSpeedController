@@ -1,0 +1,332 @@
+\hypertarget{speed__controller__test_8c}{}\doxysection{D\+:/\+Swift Act/\+PROJECT V2/\+Vaccum\+\_\+\+Speed\+\_\+\+Controller\+\_\+\+OWM/test/speed\+\_\+controller\+\_\+test/speed\+\_\+controller\+\_\+test.c File Reference}
+\label{speed__controller__test_8c}\index{D:/Swift Act/PROJECT V2/Vaccum\_Speed\_Controller\_OWM/test/speed\_controller\_test/speed\_controller\_test.c@{D:/Swift Act/PROJECT V2/Vaccum\_Speed\_Controller\_OWM/test/speed\_controller\_test/speed\_controller\_test.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}speed\+\_\+controller\+\_\+test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../source/speed\+\_\+controller/speed\+\_\+controller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../unity/unity\+\_\+fixture.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../fake\+\_\+switches/fake\+\_\+switches.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../source/switches/switches.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../source/motor/motor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../fake\+\_\+motor/fake\+\_\+motor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../fake\+\_\+motor/fake\+\_\+motor\+\_\+test.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_a6dc858c5c3c90fdc63e27c72a64afa1d}{TEST\+\_\+\+GROUP}} (Speed\+Level)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_a92c02ac66fd2605d3fbbf5d16c3d5f0b}{TEST\+\_\+\+SETUP}} (Speed\+Level)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_a1ed92c0c53cf508beeb57d66ce07726b}{TEST\+\_\+\+TEAR\+\_\+\+DOWN}} (Speed\+Level)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_abdbed325c43ef78a10760bdb8dc9819e}{TEST}} (Speed\+Level, Speed\+Med\+After\+Init)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_aa6b2725b10f1a99e5aefbe40ec76d783}{TEST}} (Speed\+Level, Speed\+Increase\+Min\+To\+Med\+When\+\_\+\+Pos\+\_\+\+Prepressed)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_a750ea2703eb95cb7e12e0c99f995af67}{TEST}} (Speed\+Level, Speed\+Increase\+Med\+To\+Max\+When\+\_\+\+Pos\+\_\+\+Prepressed)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_ae53ac62568b23391f137a246beed818b}{TEST}} (Speed\+Level, Speed\+Decrease\+Max\+To\+Med\+When\+\_\+\+Neg\+\_\+\+Prepressed)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_a1a1be92e9e0762eaa3a849c4fe02006c}{TEST}} (Speed\+Level, Speed\+Decrease\+Med\+To\+Min\+When\+\_\+\+Neg\+\_\+\+Prepressed)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_a4ac241eea12530f4331c463bb9084faa}{TEST}} (Speed\+Level, Speed\+Max\+\_\+\+Pos\+\_\+\+Prepressed\+No\+Change)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_a925abca3e43bf4ac635a338235b08dec}{TEST}} (Speed\+Level, Speed\+Min\+\_\+\+Neg\+\_\+\+Prepressed\+No\+Change)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_a45adb5c84b6699af40a3f793eb7f75ed}{TEST}} (Speed\+Level, Speed\+Max\+\_\+\+P\+\_\+is\+Pressed30secs\+Speed\+Med)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_a8400eaaf2568cd6334c617c2b86e8b9b}{TEST}} (Speed\+Level, Speed\+Med\+\_\+\+P\+\_\+is\+Pressed30secs\+Speed\+Min)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_a419765bdad0c45a575fb0927293e69ca}{TEST}} (Speed\+Level, Speed\+Min\+\_\+\+P\+\_\+is\+Pressed30secs\+No\+Change)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_a34a5a0679b1ec467055346134ac2c68b}{TEST}} (Speed\+Level, Speed\+Max\+\_\+\+P\+\_\+is\+Pressed\+Less\+Than30secs\+No\+Change)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_a98f8e98208aa2d15cdd0b0a74c6b3d14}{TEST}} (Speed\+Level, Start\+Def\+Min\+Def\+Min)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_a77fdbdfca66ebb2f7cb9acf1c87caaa1}{TEST}} (Speed\+Level, Start\+Def\+Min\+Def\+Max)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_aada46ab90cd7067b72ee9bc9de92d753}{TEST}} (Speed\+Level, Start\+Def\+Max\+Def\+Min)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_a9d2d9bc05d0ffaa6efdeee7e1f18c586}{TEST}} (Speed\+Level, Start\+Def\+Max\+Def\+Max)
+\item 
+\mbox{\hyperlink{speed__controller__test_8c_aa9b22130c8a285888e9661075f4170e9}{TEST\+\_\+\+GROUP\+\_\+\+RUNNER}} (Speed\+Level)
+\item 
+void \mbox{\hyperlink{speed__controller__test_8c_a2b6126496d86370b533aa361dead30e0}{SPEED\+\_\+\+CONTROLLER\+\_\+string\+\_\+to\+\_\+enum}} (\mbox{\hyperlink{switches_8h_a6fb694a794c8aad66c29742b898cf760}{SWITCH\+\_\+\+TYPE\+\_\+t}} switch\+\_\+type, char string\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{speed__controller__test_8c_af2d06ac16eb100ca944b61d51c56165c}{SPEED\+\_\+\+CONTROLLER\+\_\+get\+Test\+Data}} (int test\+\_\+num)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{speed__controller__test_8c_af2d06ac16eb100ca944b61d51c56165c}\label{speed__controller__test_8c_af2d06ac16eb100ca944b61d51c56165c}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!SPEED\_CONTROLLER\_getTestData@{SPEED\_CONTROLLER\_getTestData}}
+\index{SPEED\_CONTROLLER\_getTestData@{SPEED\_CONTROLLER\_getTestData}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{SPEED\_CONTROLLER\_getTestData()}{SPEED\_CONTROLLER\_getTestData()}}
+{\footnotesize\ttfamily void SPEED\+\_\+\+CONTROLLER\+\_\+get\+Test\+Data (\begin{DoxyParamCaption}\item[{int}]{test\+\_\+num }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{speed__controller__test_8c_a2b6126496d86370b533aa361dead30e0}\label{speed__controller__test_8c_a2b6126496d86370b533aa361dead30e0}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!SPEED\_CONTROLLER\_string\_to\_enum@{SPEED\_CONTROLLER\_string\_to\_enum}}
+\index{SPEED\_CONTROLLER\_string\_to\_enum@{SPEED\_CONTROLLER\_string\_to\_enum}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{SPEED\_CONTROLLER\_string\_to\_enum()}{SPEED\_CONTROLLER\_string\_to\_enum()}}
+{\footnotesize\ttfamily void SPEED\+\_\+\+CONTROLLER\+\_\+string\+\_\+to\+\_\+enum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{switches_8h_a6fb694a794c8aad66c29742b898cf760}{SWITCH\+\_\+\+TYPE\+\_\+t}}}]{switch\+\_\+type,  }\item[{char}]{string\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{speed__controller__test_8c_ae53ac62568b23391f137a246beed818b}\label{speed__controller__test_8c_ae53ac62568b23391f137a246beed818b}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/15]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Speed\+Level}]{,  }\item[{Speed\+Decrease\+Max\+To\+Med\+When\+\_\+\+Neg\+\_\+\+Prepressed}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\bfseries{EP and BVA}} 
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is maximum \\
+\hline
+{\em When} & \+: Negative switch is prepressed \\
+\hline
+{\em Then} & \+: Speed is medium\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{speed__controller__test_8c_a1a1be92e9e0762eaa3a849c4fe02006c}\label{speed__controller__test_8c_a1a1be92e9e0762eaa3a849c4fe02006c}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/15]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Speed\+Level}]{,  }\item[{Speed\+Decrease\+Med\+To\+Min\+When\+\_\+\+Neg\+\_\+\+Prepressed}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\bfseries{EP and BVA}} 
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is medium \\
+\hline
+{\em When} & \+: Negative switch is prepressed \\
+\hline
+{\em Then} & \+: Speed is minimum\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{speed__controller__test_8c_a750ea2703eb95cb7e12e0c99f995af67}\label{speed__controller__test_8c_a750ea2703eb95cb7e12e0c99f995af67}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/15]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Speed\+Level}]{,  }\item[{Speed\+Increase\+Med\+To\+Max\+When\+\_\+\+Pos\+\_\+\+Prepressed}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\bfseries{EP and BVA}} 
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is medium \\
+\hline
+{\em When} & \+: Positive switch is prepressed \\
+\hline
+{\em Then} & \+: Speed is maximum\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{speed__controller__test_8c_aa6b2725b10f1a99e5aefbe40ec76d783}\label{speed__controller__test_8c_aa6b2725b10f1a99e5aefbe40ec76d783}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/15]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Speed\+Level}]{,  }\item[{Speed\+Increase\+Min\+To\+Med\+When\+\_\+\+Pos\+\_\+\+Prepressed}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\bfseries{EP and BVA}} 
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is minimum \\
+\hline
+{\em When} & \+: Positive switch is prepressed \\
+\hline
+{\em Then} & \+: Speed is medium\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{speed__controller__test_8c_a45adb5c84b6699af40a3f793eb7f75ed}\label{speed__controller__test_8c_a45adb5c84b6699af40a3f793eb7f75ed}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/15]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Speed\+Level}]{,  }\item[{Speed\+Max\+\_\+\+P\+\_\+is\+Pressed30secs\+Speed\+Med}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\bfseries{EP and BVA}} 
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is maximum \\
+\hline
+{\em When} & \+: P is pressed for 30 seconds \\
+\hline
+{\em Then} & \+: Speed is medium\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{speed__controller__test_8c_a34a5a0679b1ec467055346134ac2c68b}\label{speed__controller__test_8c_a34a5a0679b1ec467055346134ac2c68b}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/15]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Speed\+Level}]{,  }\item[{Speed\+Max\+\_\+\+P\+\_\+is\+Pressed\+Less\+Than30secs\+No\+Change}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\bfseries{EP and BVA}} 
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is maximum \\
+\hline
+{\em When} & \+: P is pressed for less than 30 seconds (10 seconds) \\
+\hline
+{\em Then} & \+: Speed is still maximum\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{speed__controller__test_8c_a4ac241eea12530f4331c463bb9084faa}\label{speed__controller__test_8c_a4ac241eea12530f4331c463bb9084faa}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/15]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Speed\+Level}]{,  }\item[{Speed\+Max\+\_\+\+Pos\+\_\+\+Prepressed\+No\+Change}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\bfseries{EP and BVA}} 
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is maximum \\
+\hline
+{\em When} & \+: Positive switch is prepressed \\
+\hline
+{\em Then} & \+: Speed is still maximum\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{speed__controller__test_8c_a8400eaaf2568cd6334c617c2b86e8b9b}\label{speed__controller__test_8c_a8400eaaf2568cd6334c617c2b86e8b9b}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/15]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Speed\+Level}]{,  }\item[{Speed\+Med\+\_\+\+P\+\_\+is\+Pressed30secs\+Speed\+Min}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\bfseries{EP and BVA}} 
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is medium \\
+\hline
+{\em When} & \+: P is pressed for 30 seconds \\
+\hline
+{\em Then} & \+: Speed is minimum\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{speed__controller__test_8c_abdbed325c43ef78a10760bdb8dc9819e}\label{speed__controller__test_8c_abdbed325c43ef78a10760bdb8dc9819e}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/15]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Speed\+Level}]{,  }\item[{Speed\+Med\+After\+Init}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\bfseries{EP and BVA}} 
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed unknown \\
+\hline
+{\em When} & \+: \mbox{\hyperlink{speed__controller_8c_ac089cc6e5b0da52e843ce9f73238fe41}{SPEED\+\_\+\+CONTROLLER\+\_\+init()}} is called \\
+\hline
+{\em Then} & \+: Current speed is medium\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{speed__controller__test_8c_a925abca3e43bf4ac635a338235b08dec}\label{speed__controller__test_8c_a925abca3e43bf4ac635a338235b08dec}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/15]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Speed\+Level}]{,  }\item[{Speed\+Min\+\_\+\+Neg\+\_\+\+Prepressed\+No\+Change}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item Testing technique used for this test\+: {\bfseries{EP and BVA}} 
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is minimum \\
+\hline
+{\em When} & \+: Negative switch is prepressed \\
+\hline
+{\em Then} & \+: Speed is still minimum\\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\mbox{\Hypertarget{speed__controller__test_8c_a419765bdad0c45a575fb0927293e69ca}\label{speed__controller__test_8c_a419765bdad0c45a575fb0927293e69ca}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/15]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Speed\+Level}]{,  }\item[{Speed\+Min\+\_\+\+P\+\_\+is\+Pressed30secs\+No\+Change}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\bfseries{EP and BVA}} 
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is minimum \\
+\hline
+{\em When} & \+: P is pressed for 30 seconds \\
+\hline
+{\em Then} & \+: Speed is still minimum\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{speed__controller__test_8c_a9d2d9bc05d0ffaa6efdeee7e1f18c586}\label{speed__controller__test_8c_a9d2d9bc05d0ffaa6efdeee7e1f18c586}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/15]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Speed\+Level}]{,  }\item[{Start\+Def\+Max\+Def\+Max}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\bfseries{State transition up to 1-\/switch coverage}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is unknown, start state \\
+\hline
+{\em When} & \+: To advance through this branch of the state transition tree, we simulate the following actions in order\+: initialize speed controller module, press positive, press negative, press positive \\
+\hline
+{\em Then} & \+: Speed is eventually maximum\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{speed__controller__test_8c_aada46ab90cd7067b72ee9bc9de92d753}\label{speed__controller__test_8c_aada46ab90cd7067b72ee9bc9de92d753}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/15]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Speed\+Level}]{,  }\item[{Start\+Def\+Max\+Def\+Min}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\bfseries{State transition up to 1-\/switch coverage}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is unknown, start state \\
+\hline
+{\em When} & \+: To advance through this branch of the state transition tree, we simulate the following actions in order\+: initialize speed controller module, press positive, press negative, press negative again \\
+\hline
+{\em Then} & \+: Speed is eventually minimum\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{speed__controller__test_8c_a77fdbdfca66ebb2f7cb9acf1c87caaa1}\label{speed__controller__test_8c_a77fdbdfca66ebb2f7cb9acf1c87caaa1}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [14/15]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Speed\+Level}]{,  }\item[{Start\+Def\+Min\+Def\+Max}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\bfseries{State transition up to 1-\/switch coverage}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is unknown, start state \\
+\hline
+{\em When} & \+: To advance through this branch of the state transition tree, we simulate the following actions in order\+: initialize speed controller module, press negative, press positive, press positive again \\
+\hline
+{\em Then} & \+: Speed is eventually maximum\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{speed__controller__test_8c_a98f8e98208aa2d15cdd0b0a74c6b3d14}\label{speed__controller__test_8c_a98f8e98208aa2d15cdd0b0a74c6b3d14}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST@{TEST}}
+\index{TEST@{TEST}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [15/15]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Speed\+Level}]{,  }\item[{Start\+Def\+Min\+Def\+Min}]{ }\end{DoxyParamCaption})}
+
+Testing technique used for this test\+: {\bfseries{State transition up to 1-\/switch coverage}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Given} & \+: Speed is unknown, start state \\
+\hline
+{\em When} & \+: To advance through this branch of the state transition tree, we simulate the following actions in order\+: initialize speed controller module, press negative, press positive, press negative \\
+\hline
+{\em Then} & \+: Speed is eventually minimum\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{speed__controller__test_8c_a6dc858c5c3c90fdc63e27c72a64afa1d}\label{speed__controller__test_8c_a6dc858c5c3c90fdc63e27c72a64afa1d}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST\_GROUP@{TEST\_GROUP}}
+\index{TEST\_GROUP@{TEST\_GROUP}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST\_GROUP()}{TEST\_GROUP()}}
+{\footnotesize\ttfamily TEST\+\_\+\+GROUP (\begin{DoxyParamCaption}\item[{Speed\+Level}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{speed__controller__test_8c_aa9b22130c8a285888e9661075f4170e9}\label{speed__controller__test_8c_aa9b22130c8a285888e9661075f4170e9}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST\_GROUP\_RUNNER@{TEST\_GROUP\_RUNNER}}
+\index{TEST\_GROUP\_RUNNER@{TEST\_GROUP\_RUNNER}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST\_GROUP\_RUNNER()}{TEST\_GROUP\_RUNNER()}}
+{\footnotesize\ttfamily TEST\+\_\+\+GROUP\+\_\+\+RUNNER (\begin{DoxyParamCaption}\item[{Speed\+Level}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{speed__controller__test_8c_a92c02ac66fd2605d3fbbf5d16c3d5f0b}\label{speed__controller__test_8c_a92c02ac66fd2605d3fbbf5d16c3d5f0b}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST\_SETUP@{TEST\_SETUP}}
+\index{TEST\_SETUP@{TEST\_SETUP}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST\_SETUP()}{TEST\_SETUP()}}
+{\footnotesize\ttfamily TEST\+\_\+\+SETUP (\begin{DoxyParamCaption}\item[{Speed\+Level}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{speed__controller__test_8c_a1ed92c0c53cf508beeb57d66ce07726b}\label{speed__controller__test_8c_a1ed92c0c53cf508beeb57d66ce07726b}} 
+\index{speed\_controller\_test.c@{speed\_controller\_test.c}!TEST\_TEAR\_DOWN@{TEST\_TEAR\_DOWN}}
+\index{TEST\_TEAR\_DOWN@{TEST\_TEAR\_DOWN}!speed\_controller\_test.c@{speed\_controller\_test.c}}
+\doxysubsubsection{\texorpdfstring{TEST\_TEAR\_DOWN()}{TEST\_TEAR\_DOWN()}}
+{\footnotesize\ttfamily TEST\+\_\+\+TEAR\+\_\+\+DOWN (\begin{DoxyParamCaption}\item[{Speed\+Level}]{ }\end{DoxyParamCaption})}
+

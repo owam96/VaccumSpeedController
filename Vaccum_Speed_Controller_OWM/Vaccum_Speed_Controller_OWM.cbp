@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Vaccum_Speed_Controller_OWM" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Vaccum_Speed_Controller_OWM" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Vaccum_Speed_Controller_OWM" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-g" />
+		</Compiler>
+		<Unit filename="source/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="source/motor/motor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="source/motor/motor.h" />
+		<Unit filename="source/speed_controller/speed_controller.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="source/speed_controller/speed_controller.h" />
+		<Unit filename="source/switches/switches.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="source/switches/switches.h" />
+		<Unit filename="source/timer/timer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="source/timer/timer.h" />
+		<Unit filename="test/fake_motor/fake_motor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/fake_motor/fake_motor.h" />
+		<Unit filename="test/fake_motor/fake_motor_test.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/fake_motor/fake_motor_test.h" />
+		<Unit filename="test/fake_switches/fake_switches.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/fake_switches/fake_switches.h" />
+		<Unit filename="test/fake_timer/fake_timer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/fake_timer/fake_timer.h" />
+		<Unit filename="test/speed_controller_test/speed_controller_test.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/speed_controller_test/speed_controller_test.h" />
+		<Unit filename="test/unity/unity.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/unity/unity.h" />
+		<Unit filename="test/unity/unity_fixture.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/unity/unity_fixture.h" />
+		<Unit filename="test/unity/unity_fixture_internals.h" />
+		<Unit filename="test/unity/unity_internals.h" />
+		<Unit filename="test/unity/unity_memory.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/unity/unity_memory.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
