@@ -10,7 +10,7 @@ void FAKE_MOTOR_outputFinalMotorAngle(int);
 TEST_GROUP(Motor);
 
 TEST_SETUP(Motor){
-    FAKE_MOTOR_init();
+    MOTOR_init();
 }
 
 TEST_TEAR_DOWN(Motor){
@@ -23,15 +23,15 @@ TEST(Motor, MotorAnge140AfterInit){
           *  Testing technique used for this test: *EP and BVA*
           *
 		  * @param Given : Motor angle uninitialized
-		  * @param When  : FAKE_MOTOR_init() is called
+		  * @param When  : MOTOR_init() is called
 		  * @param Then  : Motor angle is 140
 	*/
 
 	/* Arrange */
-	FAKE_MOTOR_set_angle(UNINITIALIZED);
+	MOTOR_set_angle(UNINITIALIZED);
 
 	/* Act */
-    FAKE_MOTOR_init();
+    MOTOR_init();
 
     /*Assert*/
     LONGS_EQUAL(140, FAKE_MOTOR_get_angle());

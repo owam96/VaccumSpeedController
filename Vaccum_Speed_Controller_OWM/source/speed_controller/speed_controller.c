@@ -8,7 +8,7 @@ static SPEED_t current_speed;
 void SPEED_CONTROLLER_init(){
 
     current_speed = MED;
-    FAKE_MOTOR_set_angle(MED_SPEED_ANGLE);
+    MOTOR_set_angle(MED_SPEED_ANGLE);
 
 }
 
@@ -32,12 +32,12 @@ SPEED_t SPEED_CONTROLLER_get_speed(){
 void SPEED_CONTROLLER_set_speed(SPEED_t given_speed){
     current_speed = given_speed;
     if(current_speed == MIN){
-        FAKE_MOTOR_set_angle(MIN_SPEED_ANGLE);
+        MOTOR_set_angle(MIN_SPEED_ANGLE);
     }
     else if(current_speed == MED){
-        FAKE_MOTOR_set_angle(MED_SPEED_ANGLE);
+        MOTOR_set_angle(MED_SPEED_ANGLE);
     }
     else if(current_speed == MAX){
-        FAKE_MOTOR_set_angle(MAX_SPEED_ANGLE);
+        MOTOR_set_angle(MAX_SPEED_ANGLE);
     }
 }
