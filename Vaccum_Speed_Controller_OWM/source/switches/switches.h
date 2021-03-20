@@ -5,4 +5,6 @@ typedef enum {RELEASED, PRESSED, PREPRESSED, PRERELEASED} SWITCH_STATE_t;
 
 typedef enum {POS, NEG, P} SWITCH_TYPE_t;
 
+void SWITCHES_init_real();
+
 #endif // SWITCHES_H_INCLUDED

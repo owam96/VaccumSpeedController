@@ -6,6 +6,12 @@
 
 static int current_speed;
 static SWITCH_STATE_t p_switch_state;
+void FAKE_SWITCHES_init();
+void (*SWITCHES_init)() = FAKE_SWITCHES_init;
+
+void FAKE_SWITCHES_init(){
+
+}
 
 void FAKE_SWITCHES_positive_press(){
 

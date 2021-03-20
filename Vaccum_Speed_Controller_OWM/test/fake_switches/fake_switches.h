@@ -12,6 +12,10 @@ void FAKE_SWITCHES_p_press(long long int);
 
 void FAKE_SWITCHES_p_release();
 
+void FAKE_SWITCHES_init();
+
+extern void (*SWITCHES_init)();
+
 
 
 #endif // FAKE_SWITCHES_H_INCLUDED

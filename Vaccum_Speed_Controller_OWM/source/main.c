@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "speed_controller/speed_controller.h"
 #include "../test/speed_controller_test/speed_controller_test.h"
+#include "../test/fake_motor/fake_motor.h"
+#include "switches/switches.h"
+#include "../test/fake_switches/fake_switches.h"
+#include "motor/motor.h"
 
 #include "../test/unity/unity_fixture.h"
 
@@ -16,12 +21,19 @@
 void RunAllTests(){
     RUN_TEST_GROUP(SpeedLevel);
     RUN_TEST_GROUP(Motor);
+    // Test switches
 }
 
 int main(int argc, char * argv[])
 {
     MAKE_UNITY_VERBOSE;
     UnityMain(argc, argv, RunAllTests);
+
+    printf("\nApp is running\n");
+
+    SWITCHES_init();
+    SPEED_CONTROLLER_init();
+    MOTOR_init();
 
     while(1){
 
