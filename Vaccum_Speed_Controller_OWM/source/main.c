@@ -16,7 +16,6 @@
 void RunAllTests(){
     RUN_TEST_GROUP(SpeedLevel);
     RUN_TEST_GROUP(Motor);
-    SPEED_CONTROLLER_getTestData(0);
 }
 
 int main(int argc, char * argv[])
