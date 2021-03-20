@@ -5,15 +5,36 @@
 #include "../../source/speed_controller/speed_controller.h"
 
 static int current_speed;
+static SWITCH_STATE_t pos_switch_state;
+static SWITCH_STATE_t neg_switch_state;
 static SWITCH_STATE_t p_switch_state;
-void FAKE_SWITCHES_init();
-void (*SWITCHES_init)() = FAKE_SWITCHES_init;
 
-void FAKE_SWITCHES_init(){
+/* Fake functions prototypes */
+static void FAKE_SWITCHES_init();
+static void FAKE_SWITCHES_positive_press();
+static SWITCH_STATE_t FAKE_SWITCHES_pos_get_state();
+static void FAKE_SWITCHES_negative_press();
+static SWITCH_STATE_t FAKE_SWITCHES_neg_get_state();
+static void FAKE_SWITCHES_p_press(long long int);
+static SWITCH_STATE_t FAKE_SWITCHES_p_get_state();
+static void FAKE_SWITCHES_p_release();
+
+/* Function pointers to point to fake functions during tests */
+void (*SWITCHES_init)() = FAKE_SWITCHES_init;
+void (*SWITCHES_positive_press)() = FAKE_SWITCHES_positive_press;
+SWITCH_STATE_t (*SWITCHES_pos_get_state)() = FAKE_SWITCHES_pos_get_state;
+void (*SWITCHES_negative_press)() = FAKE_SWITCHES_negative_press;
+SWITCH_STATE_t (*SWITCHES_neg_get_state)() = FAKE_SWITCHES_neg_get_state;
+void (*SWITCHES_p_press)(long long int) = FAKE_SWITCHES_p_press;
+SWITCH_STATE_t (*SWITCHES_p_get_state)() = FAKE_SWITCHES_p_get_state;
+void (*SWITCHES_p_release)() = FAKE_SWITCHES_p_release;
+
+static void FAKE_SWITCHES_init(){
+    pos_switch_state = neg_switch_state = p_switch_state = RELEASED;
 
 }
 
-void FAKE_SWITCHES_positive_press(){
+static void FAKE_SWITCHES_positive_press(){
 
 current_speed = SPEED_CONTROLLER_get_speed();
 if(current_speed == MIN)
@@ -23,7 +44,13 @@ else if (current_speed == MED)
 
 }
 
-void FAKE_SWITCHES_negative_press(){
+static SWITCH_STATE_t FAKE_SWITCHES_pos_get_state(){
+
+    return pos_switch_state;
+
+}
+
+static void FAKE_SWITCHES_negative_press(){
 
 current_speed = SPEED_CONTROLLER_get_speed();
 
@@ -35,17 +62,23 @@ else if (current_speed == MED)
 
 }
 
-SWITCH_STATE_t FAKE_SWITCHES_p_get_state(){
+static SWITCH_STATE_t FAKE_SWITCHES_neg_get_state(){
+
+    return neg_switch_state;
+
+}
+
+static SWITCH_STATE_t FAKE_SWITCHES_p_get_state(){
 
     return p_switch_state;
 
 }
 
-void FAKE_SWITCHES_p_release(){
+static void FAKE_SWITCHES_p_release(){
     p_switch_state = RELEASED;
 }
 
-void FAKE_SWITCHES_p_press(long long int duration_ms){
+static void FAKE_SWITCHES_p_press(long long int duration_ms){
 
     current_speed = SPEED_CONTROLLER_get_speed();
     p_switch_state = PRESSED;

@@ -61,7 +61,7 @@ TEST(SpeedLevel, SpeedIncreaseMinToMedWhen_Pos_Prepressed){
 	SPEED_CONTROLLER_set_speed(MIN);
 
 	/* Act */
-    FAKE_SWITCHES_positive_press();
+    SWITCHES_positive_press();
 
     /*Assert*/
     LONGS_EQUAL(MED, SPEED_CONTROLLER_get_speed());
@@ -83,7 +83,7 @@ TEST(SpeedLevel, SpeedIncreaseMedToMaxWhen_Pos_Prepressed){
 	SPEED_CONTROLLER_set_speed(MED);
 
 	/* Act */
-    FAKE_SWITCHES_positive_press();
+    SWITCHES_positive_press();
 
     /*Assert*/
     LONGS_EQUAL(MAX, SPEED_CONTROLLER_get_speed());
@@ -105,7 +105,7 @@ TEST(SpeedLevel, SpeedDecreaseMaxToMedWhen_Neg_Prepressed){
 	SPEED_CONTROLLER_set_speed(MAX);
 
 	/* Act */
-    FAKE_SWITCHES_negative_press();
+    SWITCHES_negative_press();
 
     /*Assert*/
     LONGS_EQUAL(MED, SPEED_CONTROLLER_get_speed());
@@ -127,7 +127,7 @@ TEST(SpeedLevel, SpeedDecreaseMedToMinWhen_Neg_Prepressed){
 	SPEED_CONTROLLER_set_speed(MED);
 
 	/* Act */
-    FAKE_SWITCHES_negative_press();
+    SWITCHES_negative_press();
 
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
@@ -149,7 +149,7 @@ TEST(SpeedLevel, SpeedMax_Pos_PrepressedNoChange){
 	SPEED_CONTROLLER_set_speed(MAX);
 
 	/* Act */
-    FAKE_SWITCHES_positive_press();
+    SWITCHES_positive_press();
 
     /*Assert*/
     LONGS_EQUAL(MAX, SPEED_CONTROLLER_get_speed());
@@ -171,7 +171,7 @@ TEST(SpeedLevel, SpeedMin_Neg_PrepressedNoChange){
 	SPEED_CONTROLLER_set_speed(MIN);
 
 	/* Act */
-    FAKE_SWITCHES_negative_press();
+    SWITCHES_negative_press();
 
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
@@ -193,7 +193,7 @@ TEST(SpeedLevel, SpeedMax_P_isPressed30secsSpeedMed){
 	SPEED_CONTROLLER_set_speed(MAX);
 
 	/* Act */
-    FAKE_SWITCHES_p_press(30000);
+    SWITCHES_p_press(30000);
 
     /*Assert*/
     LONGS_EQUAL(MED, SPEED_CONTROLLER_get_speed());
@@ -215,7 +215,7 @@ TEST(SpeedLevel, SpeedMed_P_isPressed30secsSpeedMin){
 	SPEED_CONTROLLER_set_speed(MED);
 
 	/* Act */
-    FAKE_SWITCHES_p_press(30000);
+    SWITCHES_p_press(30000);
 
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
@@ -237,7 +237,7 @@ TEST(SpeedLevel, SpeedMin_P_isPressed30secsNoChange){
 	SPEED_CONTROLLER_set_speed(MIN);
 
 	/* Act */
-    FAKE_SWITCHES_p_press(30000);
+    SWITCHES_p_press(30000);
 
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
@@ -259,7 +259,7 @@ TEST(SpeedLevel, SpeedMax_P_isPressedLessThan30secsNoChange){
 	SPEED_CONTROLLER_set_speed(MAX);
 
 	/* Act */
-    FAKE_SWITCHES_p_press(10000);
+    SWITCHES_p_press(15000);
 
     /*Assert*/
     LONGS_EQUAL(MAX, SPEED_CONTROLLER_get_speed());
@@ -287,9 +287,9 @@ TEST(SpeedLevel, StartDefMinDefMin){
 
 	/* Act */
     SPEED_CONTROLLER_init();
-    FAKE_SWITCHES_negative_press();
-    FAKE_SWITCHES_positive_press();
-    FAKE_SWITCHES_negative_press();
+    SWITCHES_negative_press();
+    SWITCHES_positive_press();
+    SWITCHES_negative_press();
 
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
@@ -315,9 +315,9 @@ TEST(SpeedLevel, StartDefMinDefMax){
 
 	/* Act */
     SPEED_CONTROLLER_init();
-    FAKE_SWITCHES_negative_press();
-    FAKE_SWITCHES_positive_press();
-    FAKE_SWITCHES_positive_press();
+    SWITCHES_negative_press();
+    SWITCHES_positive_press();
+    SWITCHES_positive_press();
 
     /*Assert*/
     LONGS_EQUAL(MAX, SPEED_CONTROLLER_get_speed());
@@ -343,9 +343,9 @@ TEST(SpeedLevel, StartDefMaxDefMin){
 
 	/* Act */
     SPEED_CONTROLLER_init();
-    FAKE_SWITCHES_positive_press();
-    FAKE_SWITCHES_negative_press();
-    FAKE_SWITCHES_negative_press();
+    SWITCHES_positive_press();
+    SWITCHES_negative_press();
+    SWITCHES_negative_press();
 
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
@@ -371,9 +371,9 @@ TEST(SpeedLevel, StartDefMaxDefMax){
 
 	/* Act */
     SPEED_CONTROLLER_init();
-    FAKE_SWITCHES_positive_press();
-    FAKE_SWITCHES_negative_press();
-    FAKE_SWITCHES_positive_press();
+    SWITCHES_positive_press();
+    SWITCHES_negative_press();
+    SWITCHES_positive_press();
 
     /*Assert*/
     LONGS_EQUAL(MAX, SPEED_CONTROLLER_get_speed());
