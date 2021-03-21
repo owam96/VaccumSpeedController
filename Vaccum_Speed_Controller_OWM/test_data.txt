@@ -1,2 +1,4 @@
-initial_angle	positive_switch	negative_switch	p_switch	expected_angle
-0	RELEASED	RELEASED	RELEASED	140
+2
+initial_angle		positive_switch		negative_switch		p_switch		expected_angle
+10			RELEASED		RELEASED		RELEASED		10
+140			PRESSED			RELEASED		RELEASED		90

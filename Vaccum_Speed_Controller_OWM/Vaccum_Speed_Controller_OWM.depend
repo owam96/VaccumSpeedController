@@ -1,8 +1,13 @@
 # depslib dependency file v1.0
-1616174785 source:d:\swift act\project v2\vaccum_speed_controller_owm\source\main.c
+1616328101 source:d:\swift act\project v2\vaccum_speed_controller_owm\source\main.c
 	<stdio.h>
 	<stdlib.h>
+	"speed_controller/speed_controller.h"
 	"../test/speed_controller_test/speed_controller_test.h"
+	"../test/fake_motor/fake_motor.h"
+	"switches/switches.h"
+	"../test/fake_switches/fake_switches.h"
+	"motor/motor.h"
 	"../test/unity/unity_fixture.h"
 
 1578842216 d:\swift act\project v2\vaccum_speed_controller_owm\test\unity\unity_fixture.h
@@ -33,7 +38,7 @@
 	<stddef.h>
 	<stdlib.h>
 
-1616157748 source:d:\swift act\project v2\vaccum_speed_controller_owm\source\speed_controller\speed_controller.c
+1616223960 source:d:\swift act\project v2\vaccum_speed_controller_owm\source\speed_controller\speed_controller.c
 	"speed_controller.h"
 	"../../test/speed_controller_test/speed_controller_test.h"
 	"../motor/motor.h"
@@ -46,7 +51,7 @@
 	<stddef.h>
 	<avr/pgmspace.h>
 
-1616175157 source:d:\swift act\project v2\vaccum_speed_controller_owm\test\speed_controller_test\speed_controller_test.c
+1616336644 source:d:\swift act\project v2\vaccum_speed_controller_owm\test\speed_controller_test\speed_controller_test.c
 	<stdio.h>
 	<string.h>
 	"speed_controller_test.h"
@@ -58,7 +63,7 @@
 	"../fake_motor/fake_motor.h"
 	"../fake_motor/fake_motor_test.h"
 
-1616174856 d:\swift act\project v2\vaccum_speed_controller_owm\test\speed_controller_test\speed_controller_test.h
+1616328073 d:\swift act\project v2\vaccum_speed_controller_owm\test\speed_controller_test\speed_controller_test.h
 
 1577326492 source:d:\swift act\project v2\vaccum_speed_controller_owm\test\unity\unity_fixture.c
 	"unity_fixture.h"
@@ -71,19 +76,19 @@
 	<string.h>
 	<stdlib.h>
 
-1616111708 source:d:\swift act\project v2\vaccum_speed_controller_owm\source\switches\switches.c
+1616230298 source:d:\swift act\project v2\vaccum_speed_controller_owm\source\switches\switches.c
 	"switches.h"
 
-1616170594 d:\swift act\project v2\vaccum_speed_controller_owm\source\switches\switches.h
+1616233661 d:\swift act\project v2\vaccum_speed_controller_owm\source\switches\switches.h
 
-1616170600 source:d:\swift act\project v2\vaccum_speed_controller_owm\test\fake_switches\fake_switches.c
+1616328498 source:d:\swift act\project v2\vaccum_speed_controller_owm\test\fake_switches\fake_switches.c
 	"fake_switches.h"
 	"../../source/switches/switches.h"
 	"../fake_timer/fake_timer.h"
 	"../../source/timer/timer.h"
 	"../../source/speed_controller/speed_controller.h"
 
-1616117817 d:\swift act\project v2\vaccum_speed_controller_owm\test\fake_switches\fake_switches.h
+1616326930 d:\swift act\project v2\vaccum_speed_controller_owm\test\fake_switches\fake_switches.h
 	"../../source/switches/switches.h"
 
 1616113502 source:d:\swift act\project v2\vaccum_speed_controller_owm\source\timer\timer.c
@@ -98,17 +103,17 @@
 	"fake_timer.h"
 	"../../source/timer/timer.h"
 
-1616133481 source:d:\swift act\project v2\vaccum_speed_controller_owm\source\motor\motor.c
+1616238062 source:d:\swift act\project v2\vaccum_speed_controller_owm\source\motor\motor.c
 	"motor.h"
 
-1616157511 d:\swift act\project v2\vaccum_speed_controller_owm\source\motor\motor.h
+1616238062 d:\swift act\project v2\vaccum_speed_controller_owm\source\motor\motor.h
 
-1616137011 source:d:\swift act\project v2\vaccum_speed_controller_owm\test\fake_motor\fake_motor.c
+1616238062 source:d:\swift act\project v2\vaccum_speed_controller_owm\test\fake_motor\fake_motor.c
 	"fake_motor.h"
 
-1616136975 d:\swift act\project v2\vaccum_speed_controller_owm\test\fake_motor\fake_motor.h
+1616238062 d:\swift act\project v2\vaccum_speed_controller_owm\test\fake_motor\fake_motor.h
 
-1616153597 source:d:\swift act\project v2\vaccum_speed_controller_owm\test\fake_motor\fake_motor_test.c
+1616238062 source:d:\swift act\project v2\vaccum_speed_controller_owm\test\fake_motor\fake_motor_test.c
 	<stdio.h>
 	"fake_motor_test.h"
 	"../unity/unity_fixture.h"

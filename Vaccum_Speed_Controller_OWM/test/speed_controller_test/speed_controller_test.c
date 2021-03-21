@@ -16,12 +16,23 @@ static MOTOR_ANGLE_t expected_motor_angle;
 static long long int pPressTimeMS;
 
 TEST_GROUP(SpeedLevel);
+TEST_GROUP(GeneralTestCases);
 
 TEST_SETUP(SpeedLevel){
     SPEED_CONTROLLER_init();
 }
 
+TEST_SETUP(GeneralTestCases){
+    SPEED_CONTROLLER_init();
+}
+
+
+
 TEST_TEAR_DOWN(SpeedLevel){
+
+}
+
+TEST_TEAR_DOWN(GeneralTestCases){
 
 }
 
@@ -44,7 +55,6 @@ TEST(SpeedLevel, SpeedMedAfterInit){
     /*Assert*/
     LONGS_EQUAL(MED, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedIncreaseMinToMedWhen_Pos_Prepressed){
@@ -66,7 +76,6 @@ TEST(SpeedLevel, SpeedIncreaseMinToMedWhen_Pos_Prepressed){
     /*Assert*/
     LONGS_EQUAL(MED, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedIncreaseMedToMaxWhen_Pos_Prepressed){
@@ -88,7 +97,6 @@ TEST(SpeedLevel, SpeedIncreaseMedToMaxWhen_Pos_Prepressed){
     /*Assert*/
     LONGS_EQUAL(MAX, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedDecreaseMaxToMedWhen_Neg_Prepressed){
@@ -110,7 +118,6 @@ TEST(SpeedLevel, SpeedDecreaseMaxToMedWhen_Neg_Prepressed){
     /*Assert*/
     LONGS_EQUAL(MED, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedDecreaseMedToMinWhen_Neg_Prepressed){
@@ -132,7 +139,6 @@ TEST(SpeedLevel, SpeedDecreaseMedToMinWhen_Neg_Prepressed){
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedMax_Pos_PrepressedNoChange){
@@ -154,7 +160,6 @@ TEST(SpeedLevel, SpeedMax_Pos_PrepressedNoChange){
     /*Assert*/
     LONGS_EQUAL(MAX, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedMin_Neg_PrepressedNoChange){
@@ -176,7 +181,6 @@ TEST(SpeedLevel, SpeedMin_Neg_PrepressedNoChange){
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedMax_P_isPressed30secsSpeedMed){
@@ -198,7 +202,6 @@ TEST(SpeedLevel, SpeedMax_P_isPressed30secsSpeedMed){
     /*Assert*/
     LONGS_EQUAL(MED, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedMed_P_isPressed30secsSpeedMin){
@@ -220,7 +223,6 @@ TEST(SpeedLevel, SpeedMed_P_isPressed30secsSpeedMin){
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedMin_P_isPressed30secsNoChange){
@@ -242,7 +244,6 @@ TEST(SpeedLevel, SpeedMin_P_isPressed30secsNoChange){
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, SpeedMax_P_isPressedLessThan30secsNoChange){
@@ -264,7 +265,6 @@ TEST(SpeedLevel, SpeedMax_P_isPressedLessThan30secsNoChange){
     /*Assert*/
     LONGS_EQUAL(MAX, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 /* Tests to cover state transition 1-switch coverage */
@@ -294,7 +294,6 @@ TEST(SpeedLevel, StartDefMinDefMin){
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, StartDefMinDefMax){
@@ -322,7 +321,6 @@ TEST(SpeedLevel, StartDefMinDefMax){
     /*Assert*/
     LONGS_EQUAL(MAX, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, StartDefMaxDefMin){
@@ -350,7 +348,6 @@ TEST(SpeedLevel, StartDefMaxDefMin){
     /*Assert*/
     LONGS_EQUAL(MIN, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
 }
 
 TEST(SpeedLevel, StartDefMaxDefMax){
@@ -378,9 +375,31 @@ TEST(SpeedLevel, StartDefMaxDefMax){
     /*Assert*/
     LONGS_EQUAL(MAX, SPEED_CONTROLLER_get_speed());
 
-    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
+
 }
 
+TEST(GeneralTestCases, TestCaseDrawnFromTextFile){
+
+    /* Doxygen Test Case Description */
+    /*!
+		  * @param Given : Initial condition is specified during runtime
+		  * @param When  : Action to take is specified during runtime
+		  * @param Then  : Expected output is specified during runtime
+	*/
+
+	/* Arrange */
+	MOTOR_set_angle(initial_motor_angle);
+
+	/* Act */
+    FAKE_SWITCHES_pos_set_state(switchStates[POS]);
+    FAKE_SWITCHES_neg_set_state(switchStates[NEG]);
+    FAKE_SWITCHES_p_set_state(switchStates[P]);
+
+    /*Assert*/
+
+    FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
+    LONGS_EQUAL(expected_motor_angle, MOTOR_get_angle());
+}
 
 TEST_GROUP_RUNNER(SpeedLevel){
 
@@ -431,7 +450,7 @@ void SPEED_CONTROLLER_string_to_enum(SWITCH_TYPE_t switch_type, char string[]){
         }
 }
 
-void SPEED_CONTROLLER_getTestData(int test_num){
+void SPEED_CONTROLLER_run_text_file_tests(){
     FILE* testDataFile = fopen("test_data.txt","r+");
     char pos_switch_state_STR[20];
     char neg_switch_state_STR[20];
@@ -439,23 +458,32 @@ void SPEED_CONTROLLER_getTestData(int test_num){
 
     if(testDataFile)
     {
-        unsigned char i = 0 ;
+        int test_num = 0;
+        int test_count = 0;
+
+        fscanf(testDataFile, "%d\n", &test_num);
 
         /* Discard header*/
-        fscanf(testDataFile, "%*s\t%*s\t%*s\t%*s\t%*s\n");
+        fscanf(testDataFile, "%*s%*s%*s%*s%*s\n");
 
-        for(i = 0; i <= test_num; i++)
-        {
+        while(test_num--){
+
             memset(pos_switch_state_STR,0,20);
             memset(neg_switch_state_STR,0,20);
             memset(p_switch_state_STR,0,20);
-            fscanf(testDataFile, "%d\t%s\t%s\t%s\t%d\n", &initial_motor_angle, pos_switch_state_STR,
+            fscanf(testDataFile, "%d%s%s%s%d\n", &initial_motor_angle, pos_switch_state_STR,
                    neg_switch_state_STR, p_switch_state_STR, &expected_motor_angle);
-        }
+
 
         SPEED_CONTROLLER_string_to_enum(POS, pos_switch_state_STR);
         SPEED_CONTROLLER_string_to_enum(NEG, neg_switch_state_STR);
         SPEED_CONTROLLER_string_to_enum(P, p_switch_state_STR);
+
+        RUN_TEST_CASE(GeneralTestCases, TestCaseDrawnFromTextFile);
+
+        ++test_count;
+
+        }
 
         fclose(testDataFile);
     }
@@ -463,9 +491,4 @@ void SPEED_CONTROLLER_getTestData(int test_num){
     {
         printf("Failed To open the file.\n");
     }
-}
-
-static void SPEED_CONTROLLER_testArrange(){
-
-
 }

@@ -21,6 +21,7 @@
 void RunAllTests(){
     RUN_TEST_GROUP(SpeedLevel);
     RUN_TEST_GROUP(Motor);
+    SPEED_CONTROLLER_run_text_file_tests();
     // Test switches
 }
 
