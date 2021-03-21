@@ -1,4 +1,5 @@
 #include "fake_motor.h"
+#include "../../source/motor/motor.h"
 
 static void FAKE_MOTOR_set_angle(int);
 static int FAKE_MOTOR_get_angle();
@@ -23,6 +24,6 @@ static int FAKE_MOTOR_get_angle(){
 
 static void FAKE_MOTOR_init(){
 
-    current_motor_angle = 140;
+    current_motor_angle = MIN_SPEED_ANGLE;
 
 }
