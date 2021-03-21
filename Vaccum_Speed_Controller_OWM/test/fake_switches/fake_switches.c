@@ -122,9 +122,10 @@ void FAKE_SWITCHES_neg_set_state(SWITCH_STATE_t new_neg_state){
     neg_switch_state = new_neg_state;
 
 }
-void FAKE_SWITCHES_p_set_state(SWITCH_STATE_t new_p_state){
+void FAKE_SWITCHES_p_set_state(SWITCH_STATE_t new_p_state, long long int new_press_time){
 
     p_switch_state = new_p_state;
+    p_duration_MS = new_press_time;
 
 }
 

@@ -5,6 +5,6 @@
 
 void FAKE_SWITCHES_pos_set_state(SWITCH_STATE_t);
 void FAKE_SWITCHES_neg_set_state(SWITCH_STATE_t);
-void FAKE_SWITCHES_p_set_state(SWITCH_STATE_t);
+void FAKE_SWITCHES_p_set_state(SWITCH_STATE_t, long long int);
 
 #endif // FAKE_SWITCHES_H_INCLUDED

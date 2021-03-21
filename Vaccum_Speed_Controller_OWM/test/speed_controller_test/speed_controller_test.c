@@ -393,7 +393,7 @@ TEST(GeneralTestCases, TestCaseDrawnFromTextFile){
 	/* Act */
     FAKE_SWITCHES_pos_set_state(switchStates[POS]);
     FAKE_SWITCHES_neg_set_state(switchStates[NEG]);
-    FAKE_SWITCHES_p_set_state(switchStates[P]);
+    FAKE_SWITCHES_p_set_state(switchStates[P], pPressTimeMS);
     SWITCHES_update();
 
     /*Assert*/
@@ -464,15 +464,15 @@ void SPEED_CONTROLLER_run_text_file_tests(){
         fscanf(testDataFile, "%d\n", &test_num);
 
         /* Discard header*/
-        fscanf(testDataFile, "%*s%*s%*s%*s%*s\n");
+        fscanf(testDataFile, "%*s%*s%*s%*s%*s%*s\n");
 
         while(test_num--){
 
             memset(pos_switch_state_STR,0,20);
             memset(neg_switch_state_STR,0,20);
             memset(p_switch_state_STR,0,20);
-            fscanf(testDataFile, "%d%s%s%s%d\n", &initial_motor_angle, pos_switch_state_STR,
-                   neg_switch_state_STR, p_switch_state_STR, &expected_motor_angle);
+            fscanf(testDataFile, "%d%s%s%s%d%d\n", &initial_motor_angle, pos_switch_state_STR,
+                   neg_switch_state_STR, p_switch_state_STR, &pPressTimeMS, &expected_motor_angle);
 
 
         SPEED_CONTROLLER_string_to_enum(POS, pos_switch_state_STR);

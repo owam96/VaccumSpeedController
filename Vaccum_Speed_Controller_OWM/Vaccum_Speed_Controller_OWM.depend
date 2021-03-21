@@ -51,7 +51,7 @@
 	<stddef.h>
 	<avr/pgmspace.h>
 
-1616336644 source:d:\swift act\project v2\vaccum_speed_controller_owm\test\speed_controller_test\speed_controller_test.c
+1616352306 source:d:\swift act\project v2\vaccum_speed_controller_owm\test\speed_controller_test\speed_controller_test.c
 	<stdio.h>
 	<string.h>
 	"speed_controller_test.h"
@@ -79,16 +79,16 @@
 1616230298 source:d:\swift act\project v2\vaccum_speed_controller_owm\source\switches\switches.c
 	"switches.h"
 
-1616233661 d:\swift act\project v2\vaccum_speed_controller_owm\source\switches\switches.h
+1616350318 d:\swift act\project v2\vaccum_speed_controller_owm\source\switches\switches.h
 
-1616328498 source:d:\swift act\project v2\vaccum_speed_controller_owm\test\fake_switches\fake_switches.c
+1616351039 source:d:\swift act\project v2\vaccum_speed_controller_owm\test\fake_switches\fake_switches.c
 	"fake_switches.h"
 	"../../source/switches/switches.h"
 	"../fake_timer/fake_timer.h"
 	"../../source/timer/timer.h"
 	"../../source/speed_controller/speed_controller.h"
 
-1616326930 d:\swift act\project v2\vaccum_speed_controller_owm\test\fake_switches\fake_switches.h
+1616351079 d:\swift act\project v2\vaccum_speed_controller_owm\test\fake_switches\fake_switches.h
 	"../../source/switches/switches.h"
 
 1616113502 source:d:\swift act\project v2\vaccum_speed_controller_owm\source\timer\timer.c
