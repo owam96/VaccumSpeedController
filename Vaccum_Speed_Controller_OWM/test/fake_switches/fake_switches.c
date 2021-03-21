@@ -8,6 +8,7 @@ static int current_speed;
 static SWITCH_STATE_t pos_switch_state;
 static SWITCH_STATE_t neg_switch_state;
 static SWITCH_STATE_t p_switch_state;
+static long long int p_duration_MS;
 
 /* Fake functions prototypes */
 static void FAKE_SWITCHES_init();
@@ -112,12 +113,8 @@ void FAKE_SWITCHES_pos_set_state(SWITCH_STATE_t new_pos_state){
 
     pos_switch_state = new_pos_state;
 
-    if((pos_switch_state == PRESSED || pos_switch_state == PREPRESSED)\
-        && neg_switch_state == RELEASED && p_switch_state == RELEASED){
-            FAKE_SWITCHES_positive_press();
-    }
-
 }
+
 void FAKE_SWITCHES_neg_set_state(SWITCH_STATE_t new_neg_state){
 
     neg_switch_state = new_neg_state;
@@ -126,5 +123,12 @@ void FAKE_SWITCHES_neg_set_state(SWITCH_STATE_t new_neg_state){
 void FAKE_SWITCHES_p_set_state(SWITCH_STATE_t new_p_state){
 
     p_switch_state = new_p_state;
+
+}
+
+
+void FAKE_SWITCHES_update(){
+
+     if()
 
 }
