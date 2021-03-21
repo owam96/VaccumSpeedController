@@ -19,6 +19,7 @@ static SWITCH_STATE_t FAKE_SWITCHES_neg_get_state();
 static void FAKE_SWITCHES_p_press(long long int);
 static SWITCH_STATE_t FAKE_SWITCHES_p_get_state();
 static void FAKE_SWITCHES_p_release();
+static void FAKE_SWITCHES_update();
 
 /* Function pointers to point to fake functions during tests */
 void (*SWITCHES_init)() = FAKE_SWITCHES_init;
@@ -29,6 +30,7 @@ SWITCH_STATE_t (*SWITCHES_neg_get_state)() = FAKE_SWITCHES_neg_get_state;
 void (*SWITCHES_p_press)(long long int) = FAKE_SWITCHES_p_press;
 SWITCH_STATE_t (*SWITCHES_p_get_state)() = FAKE_SWITCHES_p_get_state;
 void (*SWITCHES_p_release)() = FAKE_SWITCHES_p_release;
+void (*SWITCHES_update)() = FAKE_SWITCHES_update;
 
 static void FAKE_SWITCHES_init(){
     pos_switch_state = neg_switch_state = p_switch_state = RELEASED;
@@ -127,8 +129,22 @@ void FAKE_SWITCHES_p_set_state(SWITCH_STATE_t new_p_state){
 }
 
 
-void FAKE_SWITCHES_update(){
+static void FAKE_SWITCHES_update(){
 
-     if()
+    if(p_switch_state == PREPRESSED || p_switch_state == PRESSED){
+        SWITCHES_p_press(p_duration_MS);
+        return;
+    }
+    else if(neg_switch_state == PREPRESSED || neg_switch_state == PRESSED){
+        SWITCHES_negative_press();
+        return;
+    }
+    else if(pos_switch_state == PREPRESSED || pos_switch_state == PRESSED){
+        SWITCHES_positive_press();
+        return;
+    }
+    else{
+        return;
+    }
 
 }

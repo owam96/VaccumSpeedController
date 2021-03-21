@@ -15,5 +15,6 @@ extern SWITCH_STATE_t (*SWITCHES_neg_get_state)();
 extern void (*SWITCHES_p_press)(long long int);
 extern SWITCH_STATE_t (*SWITCHES_p_get_state)();
 extern void (*SWITCHES_p_release)();
+extern void (*SWITCHES_update)();
 
 #endif // SWITCHES_H_INCLUDED

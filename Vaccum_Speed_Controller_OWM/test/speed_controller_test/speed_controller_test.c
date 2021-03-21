@@ -394,9 +394,9 @@ TEST(GeneralTestCases, TestCaseDrawnFromTextFile){
     FAKE_SWITCHES_pos_set_state(switchStates[POS]);
     FAKE_SWITCHES_neg_set_state(switchStates[NEG]);
     FAKE_SWITCHES_p_set_state(switchStates[P]);
+    SWITCHES_update();
 
     /*Assert*/
-
     FAKE_MOTOR_outputFinalMotorAngle(MOTOR_get_angle());
     LONGS_EQUAL(expected_motor_angle, MOTOR_get_angle());
 }
